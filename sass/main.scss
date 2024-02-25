@@ -1,0 +1,129 @@
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "layout/grid";
+
+@import "./pages/home";
+
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right, 
+        $color-thinGreenGradient, 
+        $color-darkGreenGradient), 
+        url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -150px;
+    }  
+}  
+
+#header {
+    &-primary-text {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            color: $color-primary-white;
+            font-size: 7rem;
+            text-align: center;
+            letter-spacing: 1.2rem;
+            animation: moveInFromTop 2s ease; 
+            animation-delay: 2s;
+        }
+    
+    &-secondary-text {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        color: $color-primary-white;
+        font-size: 2rem;
+        letter-spacing: .75rem;
+        margin-top: -1em;
+        animation: moveInFromBottom 2s ease;
+        animation-delay: 2s;
+    }
+    
+    &-btn {
+        padding: 20px 40px;
+        border-radius: 20px;
+        border: none;
+        margin-top: 40px;
+        cursor: pointer;
+        animation: headerBtnFadeIn 2s ease;
+        animation-delay: 2.5s;
+        color: $color-gray-dark;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+        &:hover {
+            background-color: $color-primary-light;
+            transition: 0.25s ease;
+            color: $color-primary-black;
+        }
+        
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+}
+
+
+#logo-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+img {
+    height: auto;
+    width: 5rem
+}
+
+#menu-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: $color-primary-white;
+}
+
+#menu-btn:hover {
+    background-color: $color-primary-light;
+}
+
+.line {
+    background-color: $color-gray-dark;
+    width: 30px;
+    height: 2px;
+    margin: 2px 0;
+}
+
+.line:hover {
+    background-color: $color-primary-white;
+}
+
+
+
+

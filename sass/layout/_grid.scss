@@ -1,0 +1,32 @@
+.row {
+    max-width: $grid-width;
+    background-color: #eee;
+    margin: 0 auto;
+    margin-bottom: $gutter-vertical;
+
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    //Purely an attribute selector. This says any class that contains "col", ^ is any that start with "col"
+    [class*="col"] {
+        float: left;
+        background-color: orange;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+
+
+}
+
+
+

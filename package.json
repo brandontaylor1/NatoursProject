@@ -1,10 +1,10 @@
 {
   "name": "natoursproject",
   "version": "1.0.0",
-  "description": "A Simple Application",
+  "description": "An Outdoor Touring Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass sass/main.scss css/style.css -w"
   },
   "author": "Brandon Taylor",
   "license": "ISC",
